@@ -1,0 +1,29 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        romb(10);
+    }
+
+    public static void romb(int middle) {
+        for (int top1 = 1; top1 < middle; top1++) {
+            for (int top2 = middle; top2 > top1; top2--) {
+                System.out.print(" ");
+            }
+            for (int top2 = 1; top2 < 2 * top1; top2++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int bottom1 = middle; bottom1 >= 1; bottom1--) {
+            for (int bottom2 = middle; bottom2 > bottom1; bottom2--) {
+                System.out.print(" ");
+            }
+            for (int bottom2 = 1; bottom2 < bottom1 * 2; bottom2++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
